@@ -30,4 +30,42 @@
 
 html {
   font-family: "Arvo", serif;
+  color: white;
+}
+
+body {
+  background: var(--background-1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+}
+
+.navbar__links {
+  display: none;
+  gap: 40px;
+  list-style: none;
+}
+
+.navbar__links .active {
+  color: white;
+}
+
+.navbar__links a {
+  color: var(--secondary);
+  text-decoration: none;
+  font: var(--body2-bold);
+}
+
+/* if(screen > 768px && screen < 1440px ) */
+@media screen and (min-width: 768px) {
+  .navbar__links {
+    display: flex;
+  }
+
+  .nabar__menu-icon {
+    display: none;
+  }
 }
