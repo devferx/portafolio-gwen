@@ -38,9 +38,17 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 16px;
+  background: var(--background-1);
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 16px;
 }
 
 .navbar__links {
@@ -75,6 +83,7 @@ body {
   flex-direction: column;
   gap: 16px;
   padding: 80px 0px;
+  margin-top: 64px;
 }
 
 .hero__title {
