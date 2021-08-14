@@ -31,6 +31,7 @@
 html {
   font-family: "Arvo", serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,9 +53,32 @@ body {
 }
 
 .navbar__links {
-  display: none;
-  gap: 40px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 64px);
+  padding: 0 16px;
+  background: var(--background-1);
+  transform: translateX(100%);
+  transition: 0.8s transform;
   list-style: none;
+}
+
+.navbar__menu-button {
+  background: none;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.navbar__links.navbar__links--is-visible {
+  transform: translateX(0);
 }
 
 .navbar__links .active {
@@ -64,17 +88,30 @@ body {
 .navbar__links a {
   color: var(--secondary);
   text-decoration: none;
-  font: var(--body2-bold);
+  font: var(--headline3);
 }
 
 /* if(screen > 768px && screen < 1440px ) */
 @media screen and (min-width: 768px) {
   .navbar__links {
-    display: flex;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-start;
+    transform: translateX(0);
+    height: auto;
+    width: auto;
+    background: transparent;
+    gap: 40px;
   }
 
-  .nabar__menu-icon {
+  .navbar__menu-button {
     display: none;
+  }
+
+  .navbar__links a {
+    color: var(--secondary);
+    text-decoration: none;
+    font: var(--body2-bold);
   }
 }
 

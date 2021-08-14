@@ -19,22 +19,24 @@
       <div class="navbar-container wrapper">
         <h3 class="navbar__title navbar__title--primary">Gwen Stacy</h3>
 
-        <img
-          class="nabar__menu-icon"
-          src="./assets/icons/menu.svg"
-          alt="Hamburguer Menu"
-        />
+        <button class="navbar__menu-button" id="list-menu-button">
+          <img
+            id="menu-btn-icon"
+            src="./assets/icons/menu.svg"
+            alt="Hamburguer Menu"
+          />
+        </button>
 
         <ul class="navbar__links">
-          <li><a class="active" href="/">HOME</a></li>
-          <li><a href="/">PROYECTOS</a></li>
-          <li><a href="/">TESTIMONIOS</a></li>
-          <li><a href="/">CONTACTO</a></li>
+          <li><a class="active" href="#hero">HOME</a></li>
+          <li><a href="#projects">PROYECTOS</a></li>
+          <li><a href="#enterprises">TESTIMONIOS</a></li>
+          <li><a href="#contact">CONTACTO</a></li>
         </ul>
       </div>
     </nav>
     <div class="wrapper">
-      <section class="hero">
+      <section id="hero" class="hero">
         <h3 class="hero__title">
           Diseño y código de punta a punta de experiencias digitales
           innovadoras, sostenibles y flexibles.
@@ -47,7 +49,7 @@
         <button class="btn">Descargar currículum</button>
       </section>
 
-      <section class="projects">
+      <section id="projects" class="projects">
         <h2 class="projects__title">
           El trabajo que hago y los proyectos a los que he ayudado.
         </h2>
@@ -131,7 +133,7 @@
         </div>
       </section>
 
-      <section class="enterprises">
+      <section id="enterprises" class="enterprises">
         <h3>
           He tenido el privilegio de trabajar con múltiples empresas como.
         </h3>
@@ -149,7 +151,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="contact">
         <h3>
           ¿Quieres trabajar conmigo o simplemente tomar un café? - ¡Hazme ping!
         </h3>
@@ -175,5 +177,6 @@
         </ul>
       </footer>
     </div>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
