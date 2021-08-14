@@ -226,6 +226,42 @@ body {
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px 0;
+}
+
+.contact h3 {
+  font: var(--headline4);
+}
+
+.contact a {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--button-background);
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 80px 0;
+    gap: 80px;
+  }
+
+  .contact h3 {
+    font: var(--headline2);
+  }
+
+  .contact a {
+    font-size: 64px;
+    line-height: 76px;
+  }
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
