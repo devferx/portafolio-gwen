@@ -262,6 +262,41 @@ body {
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 0;
+  margin-bottom: 64px;
+}
+
+.footer__list p {
+  font: var(--body1-regular);
+  color: var(--secondary);
+}
+
+.footer__list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer__list a {
+  color: white;
+  text-decoration: none;
+  font: var(--body2-regular);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
+  .footer__list {
+    min-width: 268px;
+  }
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
