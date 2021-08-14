@@ -203,8 +203,7 @@ body {
 }
 
 .enterprises__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   margin-top: 40px;
 }
 
@@ -220,7 +219,7 @@ body {
     font: var(--headline2);
   }
   .enterprises__container {
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 80px;
   }
@@ -270,16 +269,16 @@ body {
   margin-bottom: 64px;
 }
 
-.footer__list p {
-  font: var(--body1-regular);
-  color: var(--secondary);
-}
-
-.footer__list ul {
+.footer__list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   list-style: none;
+}
+
+.footer__list__title {
+  font: var(--body1-regular);
+  color: var(--secondary);
 }
 
 .footer__list a {
@@ -309,5 +308,7 @@ body {
   font: var(--button);
   border: none;
   padding: 12px 24px;
+  border-radius: 4px;
   background: var(--primary);
+  cursor: pointer;
 }
